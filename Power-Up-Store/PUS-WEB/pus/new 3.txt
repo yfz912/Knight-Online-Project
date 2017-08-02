@@ -1,0 +1,94 @@
+CREATE TABLE [dbo].[TB_USER21](
+	[ID] [int] IDENTITY(1,1) NOT NULL,
+	[strAccountID] [varchar](21) NULL,
+	[strPasswd] [varchar](28) NULL,
+	[strSealPasswd] [char](8) NOT NULL CONSTRAINT [DF__TB_USER__strSeal__61873D06]  DEFAULT ((12345678)),
+	[strClientIP] [char](15) NULL,
+	[bPremiumType] [tinyint] NOT NULL CONSTRAINT [DF__TB_USER__bPremiu__021E29CA]  DEFAULT ((3)),
+	[dtPremiumTime] [datetime] NULL CONSTRAINT [DF__TB_USER__dtPremi__03124E03]  DEFAULT (getdate()+(3)),
+	[sHours] [smallint] NOT NULL CONSTRAINT [DF__TB_USER__sHours__6463A9B1]  DEFAULT ((0)),
+	[dtCreateTime] [datetime] NULL CONSTRAINT [DF__TB_USER__dtCreat__6557CDEA]  DEFAULT (getdate()),
+	[CashPoint] [int] NULL CONSTRAINT [DF_TB_USER_CashPoint]  DEFAULT ((0)),
+	[email] [varchar](50) NULL,
+	[guvenlikcevap] [varchar](50) NULL,
+	[guvenliksoru] [varchar](50) NULL,
+	[TCashPoint] [int] NULL,
+	[PusAdmin] [tinyint] NULL CONSTRAINT [DF_TB_USER_PusAdmin]  DEFAULT ((0)),
+	[strAuthority] [tinyint] NULL,
+	[strSocNo] [char](20) NULL,
+	[iDays] [tinyint] NULL,
+	[_KnightCash] [int] NULL,
+	[_GiftPoint] [int] NULL,
+	[HWID] [varchar](50) NULL,
+	[HashPasswordString] [smallint] NULL
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO
+
+
+
+CREATE TABLE [dbo].[USERDATA](
+	[strUserID] [char](21) NOT NULL,
+	[Nation] [tinyint] NOT NULL,
+	[Race] [tinyint] NOT NULL,
+	[Class] [smallint] NOT NULL,
+	[HairRGB] [int] NOT NULL,
+	[Rank] [tinyint] NOT NULL CONSTRAINT [DF_Table_1_Rank]  DEFAULT ((0)),
+	[Title] [tinyint] NOT NULL CONSTRAINT [DF_Table_1_Title]  DEFAULT ((0)),
+	[Level] [tinyint] NOT NULL CONSTRAINT [DF_Table_1_Level]  DEFAULT ((1)),
+	[Exp] [bigint] NOT NULL CONSTRAINT [DF_Table_1_Exp]  DEFAULT ((1)),
+	[Loyalty] [int] NOT NULL CONSTRAINT [DF_Table_1_Loyalty]  DEFAULT ((100)),
+	[Face] [tinyint] NOT NULL,
+	[City] [tinyint] NOT NULL CONSTRAINT [DF_Table_1_City]  DEFAULT ((0)),
+	[Knights] [smallint] NOT NULL CONSTRAINT [DF_Table_1_Knights]  DEFAULT ((0)),
+	[Fame] [tinyint] NOT NULL CONSTRAINT [DF_Table_1_Fame]  DEFAULT ((0)),
+	[Hp] [smallint] NOT NULL CONSTRAINT [DF_Table_1_Hp]  DEFAULT ((100)),
+	[Mp] [smallint] NOT NULL CONSTRAINT [DF_Table_1_Mp]  DEFAULT ((100)),
+	[Sp] [smallint] NOT NULL CONSTRAINT [DF_Table_1_Sp]  DEFAULT ((100)),
+	[Strong] [tinyint] NOT NULL,
+	[Sta] [tinyint] NOT NULL,
+	[Dex] [tinyint] NOT NULL,
+	[Intel] [tinyint] NOT NULL,
+	[Cha] [tinyint] NOT NULL,
+	[Authority] [tinyint] NOT NULL CONSTRAINT [DF_Table_1_Authority]  DEFAULT ((1)),
+	[Points] [smallint] NOT NULL CONSTRAINT [DF_Table_1_Points]  DEFAULT ((0)),
+	[Gold] [int] NOT NULL CONSTRAINT [DF_Table_1_Gold]  DEFAULT ((500000)),
+	[Zone] [tinyint] NOT NULL CONSTRAINT [DF_Table_1_Zone]  DEFAULT ((21)),
+	[Bind] [smallint] NULL,
+	[PX] [int] NOT NULL CONSTRAINT [DF_Table_1_PX]  DEFAULT ((81700)),
+	[PZ] [int] NOT NULL CONSTRAINT [DF_Table_1_PZ]  DEFAULT ((43500)),
+	[PY] [int] NOT NULL CONSTRAINT [DF_Table_1_PY]  DEFAULT ((0)),
+	[dwTime] [int] NOT NULL CONSTRAINT [DF_Table_1_dwTime]  DEFAULT ((0)),
+	[strSkill] [varchar](10) NULL,
+	[strItem] [binary](584) NULL,
+	[strSerial] [binary](584) NULL,
+	[sQuestCount] [smallint] NOT NULL CONSTRAINT [DF_Table_1_sQuestCount]  DEFAULT ((0)),
+	[strQuest] [binary](600) NULL,
+	[MannerPoint] [int] NOT NULL CONSTRAINT [DF_Table_1_MannerPoint]  DEFAULT ((0)),
+	[LoyaltyMonthly] [int] NOT NULL CONSTRAINT [DF_Table_1_LoyaltyMonthly]  DEFAULT ((0)),
+	[iSavedCONT] [int] NOT NULL CONSTRAINT [DF_USERDATA_iSavedCONT_1]  DEFAULT ((0)),
+	[strItemTime] [binary](584) NULL CONSTRAINT [DF_USERDATA_strItemTime]  DEFAULT ((0)),
+	[dtCreateTime] [datetime] NOT NULL CONSTRAINT [DF_Table_1_dtCreateTime]  DEFAULT (getdate()),
+	[dtUpdateTime] [datetime] NULL,
+	[CSWFreeLoyaltyUpdateTime] [datetime] NULL,
+	[strMemo] [char](21) NULL CONSTRAINT [DF_USERDATA_strMemo]  DEFAULT ('TEST'),
+	[sGenieTime] [smallint] NOT NULL CONSTRAINT [DF_USERDATA_sGenieTime]  DEFAULT ((120)),
+	[strGenieOptions] [char](100) NULL,
+	[strItemEx] [binary](584) NULL,
+	[ip] [char](15) NULL,
+	[GM_CreatedDate] [smalldatetime] NOT NULL DEFAULT ((0)),
+	[GM_Day] [tinyint] NOT NULL DEFAULT ((0)),
+	[HashPasswordString] [smallint] NULL,
+ CONSTRAINT [PK_USERDATA] PRIMARY KEY CLUSTERED 
+(
+	[strUserID] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON) ON [PRIMARY]
+) ON [PRIMARY]
+
+GO
+
+SET ANSI_PADDING OFF
+GO

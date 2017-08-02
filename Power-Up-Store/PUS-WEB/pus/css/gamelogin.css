@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* 
+ * ------------------------------------------------------------
+ * first written: 111012
+ * updated: 
+ * ------------------------------------------------------------
+ * */
+/* default Style */
+html, body, form, fieldset, legend, input, h1, h2, h3, h4, h5, ul, ol, p, li, dl, dt, dd, th, td, address{margin:0; padding:0;}
+*{font-family:'MS Sans Serif', Verdana, Arial, Helvetica, sans-serif;}
+body{font-size:12px; line-height:16px; color:#ffffff;background:#242513;}
+input, select{font-size:12px;}
+.hidden{margin:0; padding:0; width:0; height:0; overflow:hidden; visibility:hidden; font-size:0; line-height:0;}
+fieldset, img{border:none;}
+dl img, li img{vertical-align:top;}
+ul, ol, li{list-style:none;}
+a{text-decoration:none;}
+a:link,
+a:visited{color:#A3A3A3; text-decoration:none;}
+a:hover{color:#A3A3A3; text-decoration:underline;}
+
+html{_filter:expression(document.execCommand("BackgroundImageCache", false, true));}
+.png24{_tmp:expression(setPng24(this));}
+
+/* layout */
+#wrap{width:900px;min-width:900px;height:600px;background:#242513;}
+
+
+/* gamelogin */
+#gamelogin {width:900px;height:600px;background:url(../images/gamelogin/900_600_login.gif) no-repeat center;}
+.table{width:348px;height:68px;position:relative;text-align:center;margin:0 auto;top:260px;}
+.text_idpw {font-family:"Dotum",lucida grande,tahoma,verdana,arial,sans-serif;color:#d4cea0; font-size:12px;text-align:right;padding-right:5px;}
+.gameid_input {width:202px;height:20px;background:#080808;border:1px solid #846c34;color:#a88e52;text-align:left;font-weight:bold;font-size:12px;}
+.gamepw_input {width:202px;height:20px;background:#080808;border:1px solid #846c34;color:#a88e52;text-align:left;font-weight:bold;font-size:14px;}
+
