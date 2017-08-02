@@ -16,5 +16,6 @@ Hayır kesinlikle her hangi bir ücret kimseden talep edilmeyecek, dileyen arkad
 * Facebook: selcuk.cukurr
 * Instagram: selcuk.cukurr
 * Snapchat: selcuk.cukur
+* Youtube: https://www.youtube.com/channel/UCxKTP7o_tiTc45YhKLM39zg
 * Skype: selcuk.cukur@hotmail.com
 * Mail: selcuk.cukur@hotmail.com
