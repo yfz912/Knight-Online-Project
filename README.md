@@ -3,7 +3,6 @@ Kaynak kodlarındaki problem ve sorunları en aza indirgemek ve insanların kull
 
 # 2. Bu projede neler yapılacak?
 * SERVER FILES PAYLAŞIMI
-* KAYNAK KOD PAYLAŞIMI
 * PATCH & CLIENT PAYLAŞIMI
 * KO PANEL & PUS & INDEX PAYLAŞIMI
 * QUERY SQL SERVER KOD PAYLAŞIMI
